@@ -24,16 +24,27 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_select 'form'
   end
 
-  test 'no permitir campos vacios' do
+  test 'allows to create a new product' do
 
     post products_path, params: {
       product: {
-        title: '',
+        title: 'ps4',
         description: 'casi nueva',
         price:150
 
       }
     }
-    assert_response :unprocessable_entity
+    assert_redirected_to products_path
+    assert_equal flash[:notice], 'Tu producto se ha creado correctamente'
   end
+
+  test 'render a edit form' do
+    get edit_product_path(products(:tv))
+
+    assert_response :success
+    assert_select 'form'
+  end
+
+
+
 end
