@@ -5,16 +5,41 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path
 
     assert_response :success
-    assert_select '.product',3
+    assert_select '.product', 10
+    assert_select '.category', 9
   end
 
-  test 'render a detailed product page'do
-    get product_path(products(:s95c))
+  test 'render a list of products filtered by category' do
+    get products_path(category_id: categories(:cars).id)
 
     assert_response :success
-    assert_select '.title', 'SSD 480GB'
-    assert_select '.description', 'SSD 480GB SATAIII'
-    assert_select '.price', '20'
+    assert_select '.product', 2
+  end
+
+  test 'render a list of products filtered by price' do
+    get products_path(min_price: 400,max_price:2000)
+
+    assert_response :success
+    assert_select '.product', 4
+  end
+
+  test 'render a list of products filtered by text' do
+    get products_path(query_text: 'Nintendo')
+
+    assert_response :success
+    assert_select '.product', 2
+  end
+
+
+  test 'render a detailed product page' do
+    get product_path(products(:pixel))
+
+    assert_response :success
+    assert_select '.title', 'Google Pixel 4'
+    assert_select '.description', 'Le falla la batería'
+    assert_select '.price', '100'
+
+
   end
 
   test 'render a form' do
@@ -31,7 +56,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
         title: 'ps4',
         description: 'casi nueva',
         price:150,
-        category_id: categories(:tv)
+        category_id: categories(:videogames)
       }
     }
     assert_redirected_to products_path
@@ -39,7 +64,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'render a edit form' do
-    get edit_product_path(products(:s95c))
+    get edit_product_path(products(:tv))
 
     assert_response :success
     assert_select 'form'
@@ -48,7 +73,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   test 'can delete products' do ||
 
     assert_difference('Product.count', -1)do
-    delete product_path(products(:s95c))
+    delete product_path(products(:tv))
     end
 
     assert_redirected_to products_path

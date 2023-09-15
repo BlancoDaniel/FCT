@@ -62,6 +62,10 @@ en:
       title: 'Add product'
     index:
       title: 'Products:'
+      all: 'All'
+      min_price: 'Min price'
+      max_price: 'Max price'
+      query_text: 'Search'
     show:
       edit: 'Edit product'
       delete: 'Delete product'
