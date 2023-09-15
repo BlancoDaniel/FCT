@@ -1,11 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-tv:
+s95c:
   title: S95C
   description: TV Samsung S95C UHD OLED 77"
-  price: 2100
+  price: 1900
+  category: tv
 
-ssd:
-  title: SSD 480GB
-  description: SSD 480GB SATAIII
-  price: 20
+mi13:
+  title: Xiaomi MI 13
+  description: Sin caja, falta cargador.
+  price: 450
+  category: smartphones
+
+LGG3:
+  title: LG 65G3 OLED
+  description: TV OLED UHD 65"
+  price: 2100
+  category: tv
