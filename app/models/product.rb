@@ -20,4 +20,9 @@ class Product < ApplicationRecord
 
   belongs_to :category
   belongs_to :user, default: -> {Current.user}
+
+  def owner?
+    record.user_id == Current.user.id
+  end
+
 end

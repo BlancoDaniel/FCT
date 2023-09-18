@@ -68,7 +68,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'render a edit form' do
-    get edit_product_path(products(:tv))
+    get edit_product_path(products(:ps4))
 
     assert_response :success
     assert_select 'form'
@@ -77,7 +77,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   test 'can delete products' do ||
 
     assert_difference('Product.count', -1)do
-    delete product_path(products(:tv))
+    delete product_path(products(:ps4))
     end
 
     assert_redirected_to products_path
