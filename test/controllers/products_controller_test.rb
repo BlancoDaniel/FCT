@@ -5,7 +5,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path
 
     assert_response :success
-    assert_select '.product', 10
+    assert_select '.product', 10NoMethodError: undefined method `where' for nil:NilClass
     assert_select '.category', 9
   end
 
