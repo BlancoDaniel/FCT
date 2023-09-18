@@ -26,11 +26,11 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    product
+    authorice! product
   end
 
   def update
-
+    authorice! product
     if product.update(product_params)
       redirect_to products_path, notice: t('.updated')
     else
@@ -39,6 +39,7 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    authorice! product
     product.destroy
 
     redirect_to products_path, notice: t('.destroyed')

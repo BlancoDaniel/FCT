@@ -5,7 +5,7 @@ ps4:
   description: PS4 en buen estado
   price: 150
   category: videogames
-  user: one
+  user: test1
 
 switch:
   title: Nintendo Switch
