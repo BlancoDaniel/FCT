@@ -22,11 +22,8 @@ class Product < ApplicationRecord
   belongs_to :user, default: -> {Current.user}
 
   def owner?
-<<<<<<< HEAD
     user_id == Current.user.id
-=======
-    record.user_id == Current.user.id
->>>>>>> main
+
   end
 
 end
