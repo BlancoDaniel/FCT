@@ -2,7 +2,8 @@ require "test_helper"
 
 class CategoriesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @category = categories(:sports)
+    login
+    @category = categories(:delete)
   end
 
   test "should get index" do

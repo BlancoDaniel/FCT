@@ -27,3 +27,5 @@ mobile:
 sports:
   name: Deportes
 
+delete:
+  name: testBorrar

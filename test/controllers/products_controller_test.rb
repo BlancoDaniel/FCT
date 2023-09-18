@@ -1,12 +1,15 @@
 require 'test_helper'
 
 class ProductsControllerTest < ActionDispatch::IntegrationTest
+  def setup
+    login
+  end
   test 'render a list of products' do
     get products_path
 
     assert_response :success
-    assert_select '.product', 10NoMethodError: undefined method `where' for nil:NilClass
-    assert_select '.category', 9
+    assert_select '.product', 12
+    assert_select '.category', 10
   end
 
   test 'render a list of products filtered by category' do
@@ -56,11 +59,12 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
         title: 'ps4',
         description: 'casi nueva',
         price:150,
-        category_id: categories(:videogames)
+        category_id: categories(:videogames).id
       }
     }
     assert_redirected_to products_path
     assert_equal flash[:notice], 'Tu producto se ha creado correctamente'
+
   end
 
   test 'render a edit form' do

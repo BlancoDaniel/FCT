@@ -1,4 +1,6 @@
 es:
+  app_name: 'VÉNDELO'
+  meta_title: 'Compra y vende productos de segunda mano'
   activerecord:
     models:
       product: Producto
@@ -18,12 +20,29 @@ es:
               blank: 'no puede estar vacía'
             price:
               blank: 'no puede estar vacío'
+        user:
+          attributes:
+            email:
+              blank: 'no puede estar vacío'
+            username:
+              blank: 'no puede estar vacía'
+            password:
+              blank: 'no puede estar vacío'
   common:
     confirm: '¿Estás seguro?'
     back: 'Volver'
+    not_logged_in: 'Debes iniciar sesión'
   shared:
     header:
       add: 'Añadir producto'
+  authentication:
+    users:
+      create:
+        created: 'Tu cuenta ha sido creada'
+    sessions:
+      create:
+        created: 'Bienvenido'
+        failed:  'Login inválido!'
   products:
     edit:
       title: 'Editar producto'
