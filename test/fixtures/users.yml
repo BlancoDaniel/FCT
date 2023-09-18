@@ -2,13 +2,13 @@
 
 one:
   email: one@vendelo.com
-  username: One
+  username: one
   password_digest: <%= BCrypt::Password.create('testme', cost:5) %>
   admin: false
 
 two:
   email: two@vendelo.com
-  username: Two
+  username: two
   password_digest: <%= BCrypt::Password.create('testme', cost:5) %>
   admin: false
 
