@@ -4,30 +4,24 @@ es:
   activerecord:
     models:
       product: Producto
+      user: Usuario
+      category: Categorias
+      session: Sesión
     attributes:
       product:
         title: 'Título'
         description: 'Descripción'
         price: 'Precio'
         photo: 'Foto'
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: 'no puede estar vacío'
-            description:
-              blank: 'no puede estar vacía'
-            price:
-              blank: 'no puede estar vacío'
-        user:
-          attributes:
-            email:
-              blank: 'no puede estar vacío'
-            username:
-              blank: 'no puede estar vacía'
-            password:
-              blank: 'no puede estar vacío'
+      user:
+        email: 'Email'
+        username: 'Usuario'
+        password: 'Contraseña'
+      category:
+        name: 'Nombre'
+      session:
+        login: 'Usuario/email'
+        password: 'Contraseña'
   common:
     confirm: '¿Estás seguro?'
     back: 'Volver'
@@ -35,6 +29,10 @@ es:
   shared:
     header:
       add: 'Añadir producto'
+      login: 'Acceder'
+      logout: 'Desconectarse'
+      register: 'Registrarse'
+      categories: 'Categorias'
   authentication:
     users:
       create:
@@ -43,6 +41,8 @@ es:
       create:
         created: 'Bienvenido'
         failed:  'Login inválido!'
+      destroy:
+        destroyed: 'Sesión finalizada'
   products:
     edit:
       title: 'Editar producto'
