@@ -55,7 +55,7 @@ en:
     not_authorized: 'You do not have permission to perform this action'
     not_found: 'Not found'
   shared:
-    header:
+    items:
       add: 'Add product'
       login: 'Login'
       logout: 'Logout'
@@ -77,6 +77,12 @@ en:
       title: 'Edit product'
     new:
       title: 'Add product'
+    form:
+      title_placeholder: 'What do you want to sell?'
+      description_placeholder: 'Could you describe your product?'
+      price_placeholder: 'For how much?'
+      category_placeholder: 'In what category could fit better?'
+      submit: 'Sell it now!'
     index:
       title: 'Products:'
       all: 'All'
