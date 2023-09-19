@@ -21,12 +21,6 @@ nintendo64:
   category: videogames
   user: one
 
-megadrive:
-  title: Sega Megadrive
-  description: Funciona perfectamente, solo consola
-  price: 90
-  category: videogames
-  user: test1
 
 driver2:
   title: Driver 2 para ps1

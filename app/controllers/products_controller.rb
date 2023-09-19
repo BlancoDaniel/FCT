@@ -42,7 +42,7 @@ class ProductsController < ApplicationController
     authorice! product
     product.destroy
 
-    redirect_to products_path, notice: t('.destroyed')
+    redirect_to products_path, notice: t('.destroyed'), status: :see_other
   end
 
 
@@ -53,7 +53,7 @@ class ProductsController < ApplicationController
   end
 
   def product_params_index
-    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page)
+    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page, :favorites)
   end
 
   def product

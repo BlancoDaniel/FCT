@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+test1_driver2:
+  user: test1
+  product: driver2
+
+two_ps4:
+  user: two
+  product: ps4

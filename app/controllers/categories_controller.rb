@@ -42,7 +42,7 @@ class CategoriesController < ApplicationController
   def destroy
     category.destroy
 
-    redirect_to categories_url, notice: t('.destroyed')
+    redirect_to categories_url, notice: t('.destroyed'), status: :see_other
 
   end
 
