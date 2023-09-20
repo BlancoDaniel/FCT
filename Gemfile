@@ -86,6 +86,8 @@ gem "tailwindcss-rails", "~> 2.0"
 
 gem "view_component", "~> 3.6"
 
+gem "aws-sdk-s3"
+
 gem "sidekiq", "~> 7.1"
 
 gem "dockerfile-rails", ">= 1.5", :group => :development
