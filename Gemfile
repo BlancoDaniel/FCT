@@ -70,14 +70,20 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  gem "letter_opener"
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-
+  gem "webmock"
 end
 
 
 gem "tailwindcss-rails", "~> 2.0"
+
+gem "view_component", "~> 3.6"
+
+gem "sidekiq", "~> 7.1"
