@@ -153,7 +153,7 @@ GEM
       timeout
     net-smtp (0.3.3)
       net-protocol
-    nio4r (2.5.9)
+    nio4r (2.7.0)
     nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
     pagy (6.0.4)
@@ -164,7 +164,7 @@ GEM
     psych (5.1.0)
       stringio
     public_suffix (5.0.3)
-    puma (5.6.7)
+    puma (5.6.8)
       nio4r (~> 2.0)
     racc (1.7.1)
     rack (2.2.8)
@@ -280,7 +280,7 @@ DEPENDENCIES
   pagy (~> 6.0)
   pg (~> 1.1)
   pg_search (~> 2.3)
-  puma (~> 5.0)
+  puma (~> 5.6)
   rails (~> 7.0.8)
   redis (~> 4.0)
   selenium-webdriver
